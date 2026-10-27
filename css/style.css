@@ -423,10 +423,4 @@ html[data-lang="ar"] .t-sub,html[data-lang="ar"] .step h3,html[data-lang="ar"] .
 html[data-lang="ar"] .step h3{font-size:1.15rem}
 html[data-lang="ar"] .top nav a{font-family:var(--naskh);font-size:1.02rem}
 
-/* arabesque lattice on dark surfaces */
-.on-dark,.home-story,.enquire.dark,footer,.bridge{position:relative;isolation:isolate}
-.on-dark::before,.home-story::before,.enquire.dark::before,footer::before,.bridge::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--arabesque);background-size:72px 72px;opacity:.07;pointer-events:none}
-/* ornamental dividers */
-.page-hero h1::after,.sec-head h2::after,.camp-band h2::after,.enquire h2::after{content:"";display:block;width:140px;height:16px;margin-top:20px;background:var(--divider) no-repeat center/contain}
-.cta-band h2::after{content:"";display:block;width:140px;height:16px;margin:22px auto 0;background:var(--divider) no-repeat center/contain}
 .lang{gap:4px}
