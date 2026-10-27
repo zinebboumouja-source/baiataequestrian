@@ -12,12 +12,13 @@
     document.querySelectorAll("option[data-ar]").forEach(function (o) {
       o.textContent = o.dataset[l];
     });
-    try { localStorage.setItem("baiata-lang", l); } catch (e) {}
+    try { localStorage.setItem("baiata-language", l); } catch (e) {}
   }
 
-  var saved = "ar";
-  try { saved = localStorage.getItem("baiata-lang") || "ar"; } catch (e) {}
-  setLang(saved === "en" || saved === "fr" ? saved : "ar");
+  // English on first visit; the visitor's own choice is remembered afterwards
+  var saved = "en";
+  try { saved = localStorage.getItem("baiata-language") || "en"; } catch (e) {}
+  setLang(saved === "ar" || saved === "fr" ? saved : "en");
 
   document.querySelectorAll(".lang button").forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.dataset.set); });
